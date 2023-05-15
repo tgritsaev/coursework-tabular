@@ -240,7 +240,7 @@ def create_report(config: JSONDict) -> JSONDict:
     report['environment'] = (
         {
             'CUDA_VISIBLE_DEVICES': os.environ.get('CUDA_VISIBLE_DEVICES'),
-            'gpus': 'gpu_stopper' # delu.hardware.get_gpus_info(),
+            'gpus': 'gpu_stopper', # delu.hardware.get_gpus_info(),
             'torch.version.cuda': torch.version.cuda,  # type: ignore[code]
             'torch.backends.cudnn.version()': torch.backends.cudnn.version(),  # type: ignore[code]
             'torch.cuda.nccl.version()': torch.cuda.nccl.version(),  # type: ignore[code]

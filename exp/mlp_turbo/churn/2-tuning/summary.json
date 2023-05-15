@@ -1,0 +1,30 @@
+{
+    "function": "bin.ffn.main",
+    "best": {
+        "function": "bin.ffn.main",
+        "devices": [
+            "Tesla V100-SXM2-32GB"
+        ],
+        "n_parameters": 34418,
+        "best_epoch": 33,
+        "tuning_time": "0:20:03",
+        "trial_id": 372,
+        "scores": {
+            "train": 0.8753125,
+            "val": 0.869375,
+            "test": 0.8535
+        },
+        "time": "0:00:04"
+    },
+    "n_parameters": 85786,
+    "best_epoch": 1,
+    "tuning_time": "0:58:43",
+    "trial_id": 999,
+    "scores": {
+        "train": 0.79625,
+        "val": 0.79625,
+        "test": 0.7965
+    },
+    "n_completed_trials": 1000,
+    "time": "0:58:43"
+}

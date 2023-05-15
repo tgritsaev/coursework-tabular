@@ -1,0 +1,21 @@
+{
+    "function": "bin.tune.main",
+    "best": {
+        "function": "bin.ffn.main",
+        "devices": [
+            "Tesla V100-SXM2-32GB"
+        ],
+        "n_parameters": 91053,
+        "best_epoch": 140,
+        "tuning_time": "6:59:18",
+        "trial_id": 937,
+        "scores": {
+            "train": -0.11572768947986893,
+            "val": -0.134296565631487,
+            "test": -0.1369972851487308
+        },
+        "time": "0:00:29"
+    },
+    "n_completed_trials": 1000,
+    "time": "7:29:48"
+}

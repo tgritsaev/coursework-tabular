@@ -1,0 +1,165 @@
+{
+    "function": "bin.ffn.main",
+    "environment": {
+        "CUDA_VISIBLE_DEVICES": "0",
+        "gpus": {
+            "driver": "515.43.04",
+            "devices": [
+                {
+                    "name": "Tesla V100-SXM2-32GB",
+                    "memory_total": 34359738368,
+                    "memory_free": 32403030016,
+                    "memory_used": 1956708352,
+                    "utilization": 1
+                }
+            ]
+        },
+        "torch.version.cuda": "11.6",
+        "torch.backends.cudnn.version()": 8302,
+        "torch.cuda.nccl.version()": [
+            2,
+            14,
+            3
+        ]
+    },
+    "config": {
+        "seed": 2,
+        "batch_size": 256,
+        "patience": 16,
+        "n_epochs": Infinity,
+        "data": {
+            "seed": 2,
+            "cache": true,
+            "path": ":data/california",
+            "num_policy": "quantile",
+            "cat_policy": null,
+            "y_policy": "standard"
+        },
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 0.0002206544988531089,
+            "weight_decay": 1.4613751946221896e-05
+        },
+        "model": {
+            "num_embeddings": null,
+            "backbone": {
+                "type": "MLP",
+                "n_blocks": 3,
+                "d_layer": 295,
+                "dropout": 0.3827264463680624,
+                "activation": "ReLU"
+            }
+        }
+    },
+    "n_parameters": 177591,
+    "prediction_type": null,
+    "best_epoch": 30,
+    "metrics": {
+        "train": {
+            "rmse": 0.5603638684791865,
+            "mae": 0.3966568037605498,
+            "r2": 0.7668784721964101,
+            "score": -0.5603638684791865
+        },
+        "val": {
+            "rmse": 0.560060743752673,
+            "mae": 0.39518071406665456,
+            "r2": 0.7594329756124478,
+            "score": -0.560060743752673
+        },
+        "test": {
+            "rmse": 0.5732209362112448,
+            "mae": 0.4103417974747785,
+            "r2": 0.7480110321474818,
+            "score": -0.5732209362112448
+        }
+    },
+    "time": "11:34:24",
+    "chunk_size": null,
+    "eval_batch_size": 32768,
+    "trial_id": 999,
+    "tuning_time": "11:34:24",
+    "best": {
+        "function": "bin.ffn.main",
+        "environment": {
+            "CUDA_VISIBLE_DEVICES": "0",
+            "gpus": {
+                "driver": "515.43.04",
+                "devices": [
+                    {
+                        "name": "Tesla V100-SXM2-32GB",
+                        "memory_total": 34359738368,
+                        "memory_free": 32403030016,
+                        "memory_used": 1956708352,
+                        "utilization": 0
+                    }
+                ]
+            },
+            "torch.version.cuda": "11.6",
+            "torch.backends.cudnn.version()": 8302,
+            "torch.cuda.nccl.version()": [
+                2,
+                14,
+                3
+            ]
+        },
+        "config": {
+            "seed": 2,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": Infinity,
+            "data": {
+                "seed": 2,
+                "cache": true,
+                "path": ":data/california",
+                "num_policy": "quantile",
+                "cat_policy": null,
+                "y_policy": "standard"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": 0.0008552932969413092,
+                "weight_decay": 2.847720939215306e-06
+            },
+            "model": {
+                "num_embeddings": null,
+                "backbone": {
+                    "type": "MLP",
+                    "n_blocks": 3,
+                    "d_layer": 127,
+                    "dropout": 0.20191011568739958,
+                    "activation": "ReLU"
+                }
+            }
+        },
+        "n_parameters": 33783,
+        "prediction_type": null,
+        "best_epoch": 126,
+        "metrics": {
+            "train": {
+                "rmse": 0.4113328554162057,
+                "mae": 0.2902001123622675,
+                "r2": 0.874388629329655,
+                "score": -0.4113328554162057
+            },
+            "val": {
+                "rmse": 0.4878369755779515,
+                "mae": 0.3249493030819046,
+                "r2": 0.8174779920913628,
+                "score": -0.4878369755779515
+            },
+            "test": {
+                "rmse": 0.50217928618771,
+                "mae": 0.34006569842449963,
+                "r2": 0.8066006460799978,
+                "score": -0.50217928618771
+            }
+        },
+        "time": "0:00:18",
+        "chunk_size": null,
+        "eval_batch_size": 32768,
+        "trial_id": 548,
+        "tuning_time": "6:24:33"
+    },
+    "n_completed_trials": 1000
+}

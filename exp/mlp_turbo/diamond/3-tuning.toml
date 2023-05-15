@@ -53,6 +53,6 @@ lr = [
 weight_decay = [
     "_tune_",
     "loguniform",
-    0.0,
+    1e-06,
     0.0001,
 ]

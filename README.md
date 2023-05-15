@@ -12,6 +12,7 @@ The following "guidelines" are not strict at all, but they may be helpful:
 - `bin` for experimental code (i.e. where the research is happening) and for pipelines that produce artifacts
 - `lib` for code that is unlikely to change
 - `dev` private directory, do not publish
+- `research` for research ```*.ipynb``` files
 
 ## Set up the environment
 

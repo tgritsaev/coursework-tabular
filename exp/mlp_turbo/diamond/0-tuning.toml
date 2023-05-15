@@ -36,8 +36,7 @@ d_layer = [
 ]
 dropout = [
     "_tune_",
-    "?uniform",
-    0.0,
+    "uniform",
     0.0,
     0.5,
 ]
@@ -53,8 +52,7 @@ lr = [
 ]
 weight_decay = [
     "_tune_",
-    "?loguniform",
+    "loguniform",
     0.0,
-    1e-06,
     0.0001,
 ]

@@ -10,6 +10,7 @@ import torch.nn as nn
 import torch.utils.tensorboard
 from torch import Tensor
 from tqdm import tqdm
+import json
 
 import delu
 import lib
@@ -200,6 +201,7 @@ def main(path_to_config, model_name):
         return metrics, predictions, eval_batch_size
 
     timer = lib.run_timer()
+    report.update({'metrics': {'train': [], 'val': []}})
     while epoch < C.n_epochs:
 
         model.train()
@@ -218,8 +220,10 @@ def main(path_to_config, model_name):
         epoch_losses, mean_loss = lib.process_epoch_losses(epoch_losses)
         print(f'loss: {mean_loss}')
         metrics, predictions, eval_batch_size = evaluate(
-            ['val', 'test'], eval_batch_size
+            ['train', 'val', 'test'], eval_batch_size
         )
+        report['metrics']['train'].append(metrics['train']['score'])
+        report['metrics']['val'].append(metrics['val']['score'])
         training_log.append(
             {'epoch-losses': epoch_losses, 'metrics': metrics, 'time': timer()}
         )
@@ -228,7 +232,6 @@ def main(path_to_config, model_name):
         if progress.success:
             print('\033[92m' + 'New best epoch!' + '\033[0m')
             report['best_epoch'] = epoch
-            report['metrics'] = metrics
 
         elif progress.fail or not are_valid_predictions(predictions):
             break
@@ -238,12 +241,11 @@ def main(path_to_config, model_name):
     report['time'] = str(timer)
 
     # >>> finish
-    torch.save(model.state_dict(), f"../saved_models/{model_name}")
-    report['metrics'], predictions, _ = evaluate(
-        ['train', 'val', 'test'], eval_batch_size
-    )
+    torch.save(model.state_dict(), f"../saved_models/{model_name}.pt")
     report['chunk_size'] = chunk_size
     report['eval_batch_size'] = eval_batch_size
+    with open(f"../saved_models/{model_name}.json", "w") as fout:
+        json.dump(report, fout) 
     return report
 
 

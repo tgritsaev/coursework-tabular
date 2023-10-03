@@ -1,6 +1,6 @@
 # Project: hpo in tabular data
 
-Here I investigate the hyperparameter optimization landscape in tabular data, presence of the grokking effect, model ability to pruning and optimal hyperparameter search algorithm.
+Here I investigate losslandscapes, the presence of the grokking effect, model ability to pruning and the optimal hyperparameter search algorithm in tabular data domain.
 
 ## Relevant papers
 Starting points

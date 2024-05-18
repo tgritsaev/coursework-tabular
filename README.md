@@ -1,6 +1,10 @@
 # Project: hpo in tabular data
 
-In this repository contained code with which I investigated losslandscapes, the presence of the grokking effect, model ability to pruning and an optimal hyperparameter search algorithm in tabular data domain.
+This repository contains code about:
+* visualizing neural network losslandscapes in tabular data domain (TDD)
+* the presence of the grokking effect in TDD
+* neural networks ability to pruning in TDD
+* experiments for finding optimal hyperparameter search algorithm in TDD
 
 ## Relevant papers
 Starting points

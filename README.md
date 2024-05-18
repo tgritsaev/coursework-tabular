@@ -1,7 +1,7 @@
-# Project: hpo in tabular data
+# Researching neural network qualities in tabular data domain (TDD)
 
-This repository contains code about:
-* visualizing neural network losslandscapes in tabular data domain (TDD)
+This repository contains code for:
+* visualizing neural network losslandscapes in TDD
 * the presence of the grokking effect in TDD
 * neural networks ability to pruning in TDD
 * experiments for finding optimal hyperparameter search algorithm in TDD

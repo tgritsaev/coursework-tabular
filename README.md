@@ -1,10 +1,10 @@
-# Researching neural network qualities in tabular data domain (TDD)
+# Researching neural network qualities in the tabular data domain (TDD)
 
 This repository contains code for:
-* visualizing neural network losslandscapes in TDD
-* the presence of the grokking effect in TDD
-* neural networks ability to pruning in TDD
-* experiments for finding optimal hyperparameter search algorithm in TDD
+* visualizing neural network losslandscapes in the TDD
+* the presence of the grokking effect in the TDD
+* neural networks ability to pruning in the TDD
+* experiments for finding optimal hyperparameter search algorithm in the TDD
 
 ## Relevant papers
 Starting points
